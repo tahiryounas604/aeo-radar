@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aeo-radar"
+version = "0.1.0"
+description = "AI Search Visibility Tracker: offline analysis of collected AI answers — brand mentions, position, share of voice, citations, visibility scores."
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Tahir Younas" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+aeo-radar = "aeo_radar.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
